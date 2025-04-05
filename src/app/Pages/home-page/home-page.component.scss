@@ -1,0 +1,84 @@
+.header{
+    font-size: xx-large;
+    margin-left: 1px;
+}
+
+.box{
+    margin: 0px 0px 10px 10px;
+
+}
+
+input{
+    width: 188px;
+    height: 30px;
+    margin-left: 200px;
+    align-content: baseline;
+    margin-top: 10Px;
+    margin-bottom: 10Px;
+}
+
+.data1{
+    margin-left: 200px;
+}
+
+
+._button {
+    display: block;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: rgb(7, 82, 128);
+  }
+
+  
+  ._buttonE {
+    display: flexbox;
+    font-size: 14px;
+    width: 60px;
+   
+    background: rgba(236, 220, 42, 0.792);
+    color: #000;
+  }
+
+  ._buttonD {
+    display: block;
+    font-size: 14px;
+    width: 60px;
+    background: rgb(215, 17, 17);
+   color: #000;
+  }
+
+
+
+  .container {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures rows are closely packed */
+  }
+  
+  th, td {
+    padding: 8px;
+    font-size: small;
+    text-align: left;
+  }
+  
+  tr {
+    border-bottom: 1px solid #ddd; /* Add a horizontal line between rows */
+  }
+  
+  thead {
+    font-style: normal;
+  }
+  
+  /* Optional: Add hover effect to rows */
+  tr:hover {
+    background-color: #f9f9f9;
+  }
