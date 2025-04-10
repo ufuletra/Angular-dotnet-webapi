@@ -1,0 +1,88 @@
+
+<div class="box">
+<mat-toolbar>
+  <p class="header"><span><h1>Employee CRUD Operations</h1></span></p>
+</mat-toolbar>
+<mat-divider></mat-divider>
+
+<form (ngSubmit)="formSubmit()" #employeeForm="ngForm">
+  
+  <div class="form-group" >
+    <label for="EmpName" >Name</label> &nbsp;&nbsp;
+      <input id="EmpName" required [(ngModel)]="Emp.EmpName" name="EmpName" type="text"
+        matInput placeholder="Please Enter Name">
+  </div>
+  <mat-divider></mat-divider>
+
+  <!-- Contact Field -->
+  <div class="form-group">
+    <label for="EmpContact">Contact </label> 
+      <input id="EmpContact" required [(ngModel)]="Emp.EmpContact"
+        name="EmpContact" type="text" matInput placeholder="Please Enter Contact Number">
+  </div>
+  <mat-divider></mat-divider>
+
+  <!-- Email Field -->
+  <div class="form-group">
+    <label for="EmpEmail">Email</label> &nbsp;&nbsp;&nbsp;
+      <input
+        id="EmpEmail" required [(ngModel)]="Emp.EmpEmail" name="EmpEmail" type="email"
+        matInput placeholder="Please Enter Email Address">
+  </div>
+  <mat-divider></mat-divider>
+
+  <!-- Address Field -->
+  <div class="form-group">
+    <label for="EmpAddress">Address</label>
+      <input id="EmpAddress" required [(ngModel)]="Emp.EmpAddress"
+        name="EmpAddress" type="text" placeholder="Please Enter your Address">
+  </div>
+  <mat-divider></mat-divider>
+
+  <!-- Save Button -->
+  <button type="submit" color="primary" mat-flat-button class="_button"> Save </button>
+
+</form>
+
+<mat-divider></mat-divider>
+</div>
+
+
+
+
+
+    <div class="container">
+      <h2>Data Table</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+     
+        <tbody>
+          
+          <tr *ngFor="let ed of empService.list">
+            <td>{{ ed.empId }}</td>
+            <td>{{ ed.empName}}</td>
+            <td>{{ ed.empContact }}</td>
+            <td>{{ ed.empEmail }}</td>
+            <td>{{ ed.empAddress}}</td>
+            <td><button mat-mini-fab  class="_buttonE" [routerLink]="['/update',ed.empId]"> Edit </button></td>
+            
+            
+            <td><button (click)="onDelete(ed.empId)"  mat-mini-fab  class="_buttonD"> Delete </button></td>
+          </tr>
+        </tbody>  
+        
+      </table>
+    </div>
+
+
+ 

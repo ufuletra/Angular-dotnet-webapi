@@ -5,7 +5,7 @@ import { FormSubmittedEvent } from '@angular/forms';
 import { EMPServiceService } from '../../Services/empservice.service';
 import { HttpClient } from '@angular/common/http';
 
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { EmployeeDetail } from '../../Services/employee-detail.model';
 
@@ -19,8 +19,9 @@ import { EmployeeDetail } from '../../Services/employee-detail.model';
 export class HomePageComponent implements OnInit{
   snack: any;
   ed: any;
+  empId: String | null=null;
 
-  constructor(public empService: EMPServiceService,private roughter : Router){ }
+  constructor(public empService: EMPServiceService,private roughter : Router,private _router: ActivatedRoute){ }
   
   public Emp={
     EmpName:'',
@@ -39,22 +40,31 @@ export class HomePageComponent implements OnInit{
            //success
           console.log(data);
          Swal.fire('Success Done!!', 'User id '+ data.id, 'success');
-          this.roughter.navigate(['/'])
-        // this.empService.getEmp();
+         //this.Emp.EmpId = '';
+         this.Emp.EmpName ='';
+         this.Emp.EmpContact= '';
+         this.Emp.EmpEmail= '';
+         this.Emp.EmpAddress= '';
+        this.empService.getEmp();
     },
       (error: any)=>{
           //error
           console.log(error);
           Swal.fire('Please provide all the data...!');
-        //  this.snack.open('somthing went wrong','ok',{
-        //  });
+       
     }
     
       );
     }
       ngOnInit(): void {
         this.empService.getEmp();
+      //   this._router.paramMap.subscribe(params => {
+      //     this.Id=params.get('id');
+      //   }
+      // );
       }
+
+
 
 
       onDelete(id: number){
@@ -68,49 +78,9 @@ export class HomePageComponent implements OnInit{
           }
         );
       }
-  
 
-      newpage(){
-        
-this.roughter.navigate(['./update'])
-      }
   
 
     
     }
-
-  // onSubmit(){
-  //   console.log(this.Emp);
-  //     this.http.post('http://localhost:5244/api/EmployeePOCWebApis',this.Emp).subscribe(response => {
-  //       console.log('Employee added', response);
-  //     },error => {
-  //       console.log('Error adding Employee', error);
-  //   });
-
-
-
-
-
-
-
-
-
-
-
-
-    // this.empService.addEmp(this.Emp).subscribe((data:any)=>{
-    //   Swal.fire('Employee Detail Successfuly Added.'+ data.EmpId, 'success');
-    // },
-    // (error : any)=>{Swal.fire('Error Adding Employee...!'+ 'Fail');
-    // }
-    // );
-    
-    //}
-
-
-    // ngOnInit(): void {
-    //   throw new Error('Method not implemented.');
-    // }
-
-//}
 

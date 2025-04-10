@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormSubmittedEvent } from '@angular/forms';
 import { EMPServiceService } from '../../Services/empservice.service';
 import { HttpClient } from '@angular/common/http';
 
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { EmployeeDetail } from '../../Services/employee-detail.model';
 
@@ -13,13 +13,20 @@ import { EmployeeDetail } from '../../Services/employee-detail.model';
   templateUrl: './update.component.html',
   styleUrl: './update.component.scss'
 })
-export class UpdateComponent {
-  EmpId: any;
-  ed: any;
+export class UpdateComponent implements OnInit {
+  Empid: any;
+  Emp: any;
 
-  constructor(public empService: EMPServiceService,private roughter : Router){ }
+  constructor(public empService: EMPServiceService,private roughter : Router,private _router: ActivatedRoute){ }
+  ngOnInit(): void {
+    this._router.paramMap.subscribe(params => {
+          this.Empid=params.get('id');
+        }
+      );
+  }
   
-  public Emp={
+  public newEmp={
+    EmpId: 0,
     EmpName:'',
     EmpContact:'',
     EmpEmail:'',
@@ -28,13 +35,19 @@ export class UpdateComponent {
 };
 
 
+
+
 Update(){
-    this.empService.UpdateEmp(this.EmpId,this.Emp).subscribe(
+
+  console.log(this.Empid+'---------'+ typeof this.Empid);
+  console.log("--------------------------");
+    this.newEmp.EmpId=this.Empid;
+    this.empService.UpdateEmp(this.Empid,this.newEmp).subscribe(
       (data:any)=>{
            //success
           console.log(data);
-         Swal.fire('Success Done!!', 'User id '+ data.id, 'success');
-          this.roughter.navigate(['/'])
+         Swal.fire('Update Successfully Employee Details!!', 'Employee id '+ this.Empid, 'success');
+         this.roughter.navigate(['./']);
         // this.empService.getEmp();
     },
       (error: any)=>{
@@ -45,6 +58,8 @@ Update(){
         //  });
     }
   );
+
+  
 }
 
 

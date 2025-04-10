@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UpdateComponent } from './Pages/update/update.component';
+import { AppComponent } from './app.component';
+import { HomePageComponent } from './Pages/home-page/home-page.component';
 //import { HomePageComponent } from './Pages/home-page/home-page.component';
 
 const routes: Routes = [
 
   { 
     path: '',
-    loadChildren: () =>
-        import('./app.module').then((x) => x.AppModule), 
+    component: HomePageComponent, 
   },
 
   { 
-    path: 'update', 
+    path: 'update/:id', 
     component: UpdateComponent,
     pathMatch: 'full' 
   },

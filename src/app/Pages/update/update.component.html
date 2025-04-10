@@ -1,1 +1,49 @@
-<h1>Update page</h1>
+
+<div class="box">
+  <mat-toolbar>
+    <p class="header"><span><h1>Update Employee Details</h1></span></p>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+  
+  <form (ngSubmit)="Update()" #employeeForm="ngForm">
+    
+    <div class="form-group" >
+      <label for="EmpName" >Name </label> &nbsp;&nbsp;
+        <input id="EmpName" required [(ngModel)]="newEmp.EmpName" name="EmpName" type="text"
+          matInput placeholder="Please Enter Name">
+    </div>
+
+    <mat-divider></mat-divider>
+
+
+ 
+    <div class="form-group">
+      <label for="EmpContact">Contact </label> 
+        <input id="EmpContact" required [(ngModel)]="newEmp.EmpContact"
+          name="EmpContact" type="text" matInput placeholder="Please Enter Contact Number">
+    </div>
+    <mat-divider></mat-divider>
+  
+ 
+    <div class="form-group">
+      <label for="EmpEmail">Email</label> &nbsp;&nbsp;&nbsp;
+        <input
+          id="EmpEmail" required [(ngModel)]="newEmp.EmpEmail" name="EmpEmail" type="email"
+          matInput placeholder="Please Enter Email Address">
+    </div>
+    <mat-divider></mat-divider>
+  
+    <div class="form-group">
+      <label for="EmpAddress">Address</label>
+        <input id="EmpAddress" required [(ngModel)]="newEmp.EmpAddress"
+          name="EmpAddress" type="text" placeholder="Please Enter your Address">
+    </div>
+    <mat-divider></mat-divider> 
+  
+   
+    <button type="submit" color="primary" mat-flat-button class="_button"> Update </button>
+  
+  </form>
+  </div>
+  
+  

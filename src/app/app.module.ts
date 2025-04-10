@@ -21,8 +21,7 @@ import { UpdateComponent } from './Pages/update/update.component';
   declarations: [
     AppComponent,
     HomePageComponent,
-    AppComponent,
-    UpdateComponent
+    UpdateComponent,
 
   ],
   imports: [

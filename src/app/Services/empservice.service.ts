@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from  '@angular/common/http';
 //import baseUrl from './helper';
-import { environment } from '../../environments/environment.development';
+//import { environment } from '../../environments/environment.development';
+import { environment } from '../../environments/environment';
 import { EmployeeDetail } from '../Services/employee-detail.model';
 
 @Injectable({
@@ -30,15 +31,12 @@ public SingalEmp(EmpId:number){
 }
 
 public UpdateEmp(EmpId:number,Emp:any){
-  return this.http.post(this.url+'/'+EmpId,Emp);
+  return this.http.put(this.url+'/'+EmpId,Emp);
 }
 
 
-
-
-
 public getEmp(){
-  this.http.get(this.url).subscribe({next: res => 
+ return this.http.get(this.url).subscribe({next: res => 
     {
       console.log(res)
       this.list=res as EmployeeDetail[];
