@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{F919E6E0-1D3E-4BC1-B7A5-1C8B7B1FA7D4}|EmployeePOC\\EmployeePOC.csproj|solutionrelative:employeepoc\\client\\employeepocwebapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F919E6E0-1D3E-4BC1-B7A5-1C8B7B1FA7D4}|EmployeePOC\\EmployeePOC.csproj|c:\\users\\strada\\music\\devlopement\\employeepoc\\employeepoc\\employeepoc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F919E6E0-1D3E-4BC1-B7A5-1C8B7B1FA7D4}|EmployeePOC\\EmployeePOC.csproj|solutionrelative:employeepoc\\employeepoc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F919E6E0-1D3E-4BC1-B7A5-1C8B7B1FA7D4}|EmployeePOC\\EmployeePOC.csproj|c:\\users\\strada\\music\\devlopement\\employeepoc\\employeepoc\\client\\employeedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F919E6E0-1D3E-4BC1-B7A5-1C8B7B1FA7D4}|EmployeePOC\\EmployeePOC.csproj|solutionrelative:employeepoc\\client\\employeedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F919E6E0-1D3E-4BC1-B7A5-1C8B7B1FA7D4}|EmployeePOC\\EmployeePOC.csproj|c:\\users\\strada\\music\\devlopement\\employeepoc\\employeepoc\\employeepoc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F919E6E0-1D3E-4BC1-B7A5-1C8B7B1FA7D4}|EmployeePOC\\EmployeePOC.csproj|solutionrelative:employeepoc\\employeepoc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BA0B294-1B4E-4E96-BB6F-F24CD18BE480}|APITest\\APITest.csproj|c:\\users\\strada\\music\\devlopement\\employeepoc\\apitest\\demotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,6 +62,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeePOC.csproj",
+              "DocumentMoniker": "C:\\Users\\STRADA\\Music\\Devlopement\\EmployeePOC\\EmployeePOC\\EmployeePOC.csproj",
+              "RelativeDocumentMoniker": "EmployeePOC\\EmployeePOC.csproj",
+              "ToolTip": "C:\\Users\\STRADA\\Music\\Devlopement\\EmployeePOC\\EmployeePOC\\EmployeePOC.csproj",
+              "RelativeToolTip": "EmployeePOC\\EmployeePOC.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-08T06:26:51.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "EmployeePOCWebApi.cs",
               "DocumentMoniker": "C:\\Users\\STRADA\\Music\\Devlopement\\EmployeePOC\\EmployeePOC\\Client\\EmployeePOCWebApi.cs",
@@ -70,7 +83,8 @@
               "RelativeToolTip": "EmployeePOC\\Client\\EmployeePOCWebApi.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T06:52:48.665Z"
+              "WhenOpened": "2025-04-07T06:52:48.665Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -88,18 +102,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EmployeePOC.csproj",
-              "DocumentMoniker": "C:\\Users\\STRADA\\Music\\Devlopement\\EmployeePOC\\EmployeePOC\\EmployeePOC.csproj",
-              "RelativeDocumentMoniker": "EmployeePOC\\EmployeePOC.csproj",
-              "ToolTip": "C:\\Users\\STRADA\\Music\\Devlopement\\EmployeePOC\\EmployeePOC\\EmployeePOC.csproj",
-              "RelativeToolTip": "EmployeePOC\\EmployeePOC.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-08T06:26:51.479Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "EmployeeDetails.cs",
               "DocumentMoniker": "C:\\Users\\STRADA\\Music\\Devlopement\\EmployeePOC\\EmployeePOC\\Client\\EmployeeDetails.cs",
               "RelativeDocumentMoniker": "EmployeePOC\\Client\\EmployeeDetails.cs",
@@ -107,7 +109,8 @@
               "RelativeToolTip": "EmployeePOC\\Client\\EmployeeDetails.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T05:10:21.972Z"
+              "WhenOpened": "2025-04-02T05:10:21.972Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
